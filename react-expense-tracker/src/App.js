@@ -1,4 +1,5 @@
 import ExpenseForm from './ExpenseForm';
+import ExpenseTable from './ExpenseTable';
 
 function App() {
   const title = 'Expense Tracker';
@@ -12,7 +13,9 @@ function App() {
       </div>
       <div className="container">
         <button className="create-expense-button" onClick={handleClick}>Create New Expense</button>
+        <ExpenseForm />
       </div>
+      <ExpenseTable />
     </div>
   );
 }
