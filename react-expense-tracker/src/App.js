@@ -12,9 +12,9 @@ function App() {
         <h1>{title}</h1>
       </div>
       <div className="container">
-        <button className="create-expense-button" onClick={() => changeModalState(true)}>Create New Expense</button>
+        <button className="create-expense-button" onClick={() => changeModalState(!modalState)}>Create New Expense</button>
       </div>
-      {modalState && <ExpenseForm closeModal={modalState} />}
+      {modalState && <ExpenseForm closeModal={changeModalState} />}
       <ExpenseTable />
     </div>
   );

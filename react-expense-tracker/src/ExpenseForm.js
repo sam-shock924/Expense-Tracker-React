@@ -1,8 +1,8 @@
 import { Modal, Button } from 'react-bootstrap';
 
 
-export default function ExpenseForm(props) {
-    const modalState = props.modalState;
+export default function ExpenseForm({closeModal}) {
+    // const modalState = props.changeModalState;
     return ( 
         <div className="ExpenseForm">
             <Modal.Dialog>
@@ -15,7 +15,7 @@ export default function ExpenseForm(props) {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button onClick={() => modalState(false)}>Close</Button>
+                    <Button onClick={() => closeModal(false)}>Close</Button>
                     <Button >Submit</Button>
                 </Modal.Footer>
             </Modal.Dialog>
