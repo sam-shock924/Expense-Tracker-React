@@ -8,7 +8,6 @@ export default function ExpenseForm({closeModal}) {
                 <Modal.Header>
                     <Modal.Title>New Expense</Modal.Title>
                 </Modal.Header>
-
                 <Modal.Body>
                     <form className="ExpenseFormArea"> 
                         <div className="form-group">
@@ -31,7 +30,6 @@ export default function ExpenseForm({closeModal}) {
                         </div>
                     </form>
                 </Modal.Body>
-
                 <Modal.Footer>
                     <Button onClick={() => closeModal(false)}>Cancel</Button>
                     <Button >Add new expense</Button>
@@ -40,5 +38,3 @@ export default function ExpenseForm({closeModal}) {
         </div>
      );
 }
-
-/*form needs: date, description, amount, category*/
