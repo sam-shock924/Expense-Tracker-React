@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/Table';
 const ExpenseTable = () => {
     return ( 
         <div className="expense-table">
-            <table>
+            <Table bordered hover>
                 <thead>
                     <tr>
                         <th>Date</th>
@@ -14,7 +14,7 @@ const ExpenseTable = () => {
                 </thead>
                 <tbody className="">
                 </tbody>
-            </table>
+            </Table>
         </div>
      );
 }

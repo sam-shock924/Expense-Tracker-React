@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function App() {
   const title = 'Expense Tracker';
-  const [modalState, changeModalState] = useState(false);
+  const [modalState, setModalState] = useState(false);
   
   return (
     <div className="App">
@@ -12,9 +12,9 @@ function App() {
         <h1>{title}</h1>
       </div>
       <div className="container">
-        <button className="create-expense-button" onClick={() => changeModalState(!modalState)}>Create New Expense</button>
+        <button className="create-expense-button" onClick={() => setModalState(!modalState)}>Create New Expense</button>
       </div>
-      {modalState && <ExpenseForm closeModal={changeModalState} />}
+      {modalState && <ExpenseForm closeModal={setModalState} />}
       <ExpenseTable />
     </div>
   );

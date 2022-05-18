@@ -1,15 +1,15 @@
 import { Modal, Button } from 'react-bootstrap';
-
+// import { createPortal } from 'react-dom';
 
 export default function ExpenseForm({closeModal}) {
-    return ( 
+    return (
         <div className="ExpenseForm">
             <Modal.Dialog>
                 <Modal.Header>
                     <Modal.Title>New Expense</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <form className="ExpenseFormArea"> 
+                    <form className="ExpenseFormArea">
                         <div className="form-group">
                             <label htmlFor="item-date">Date:</label>
                             <input type="date" className="form-inputs" id="item-date" />
@@ -36,5 +36,5 @@ export default function ExpenseForm({closeModal}) {
                 </Modal.Footer>
             </Modal.Dialog>
         </div>
-     );
+    );
 }
