@@ -12,11 +12,11 @@ const ExpenseTable = () => {
                         <th>Amount</th>
                     </tr>
                 </thead>
-                <tbody className="">
+                <tbody className="expense-table-body">
                 </tbody>
             </Table>
         </div>
-     );
+    );
 }
- 
+
 export default ExpenseTable;
