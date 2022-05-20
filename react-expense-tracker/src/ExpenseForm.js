@@ -26,22 +26,22 @@ export default function ExpenseForm({ closeModal }) {
 
     const submitForm = (e) => {
         e.preventDefault();
+        console.log(userDate, userDescription, userType, userAmount)
         setDate('');
         setDescription('');
         setType('');
         setAmount('');
     }
     
-    console.log(userDate, userDescription, userType, userAmount)
 
         return (
             <div className="ExpenseForm">
                 <Modal.Dialog>
-                    <Modal.Header>
-                        <Modal.Title>New Expense</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <form className="ExpenseFormArea" onSubmit={submitForm}>
+                    <form className="ExpenseFormArea" onSubmit={submitForm}>
+                        <Modal.Header>
+                            <Modal.Title>New Expense</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
                             <div className="form-group">
                                 <label htmlFor="item-date">Date:</label>
                                 <input type="date" className="form-inputs" id="item-date" onChange={changeDateHandler} value={userDate} required/>
@@ -61,12 +61,12 @@ export default function ExpenseForm({ closeModal }) {
                                 <label htmlFor="item-amount">Amount:</label>
                                 <input type="number" className="form-inputs" id="item-amount" placeholder="Enter amount" onChange={changeAmountHandler} value={userAmount} required/>
                             </div>
-                        </form>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button onClick={() => closeModal(false)}>Cancel</Button>
-                        <Button type="submit" >Add new expense</Button>
-                    </Modal.Footer>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button onClick={() => closeModal(false)}>Cancel</Button>
+                            <Button type="submit" >Add new expense</Button>
+                        </Modal.Footer>
+                    </form>
                 </Modal.Dialog>
             </div>
         );
