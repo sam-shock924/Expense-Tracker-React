@@ -37,7 +37,6 @@ export default function ExpenseForm({ closeModal }) {
 								className="col-sm-9"
 								id="item-date"
 								onChange={handleAddFormData}
-								// value={userDate}
 								htmlFor="date"
 								required
 							/>

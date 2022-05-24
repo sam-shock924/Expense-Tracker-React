@@ -1,5 +1,4 @@
 import Table from "react-bootstrap/Table";
-import ExpenseForm from "./ExpenseForm";
 
 const ExpenseTable = () => {
 	return (
@@ -16,10 +15,10 @@ const ExpenseTable = () => {
 				</thead>
 				<tbody className="expense-table-body">
 					<tr>
-						<td>04/20/2022</td>
-						<td>Blow and hookers</td>
+						<td>01/01/2020</td>
+						<td>Lunch</td>
 						<td>Cash</td>
-						<td>$69</td>
+						<td>$10.00</td>
 					</tr>
 				</tbody>
 			</Table>
