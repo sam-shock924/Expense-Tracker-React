@@ -1,13 +1,15 @@
 import { Modal, Button } from "react-bootstrap";
 import { useState } from "react";
 
-export default function ExpenseForm({ closeModal }) {
+export default function ExpenseForm({ closeModal, updateTable }) {
+	/* PUSH TO APP.JS
 	const [userFormData, setUserFormData] = useState({
 		date: "",
 		description: "",
 		type: "",
-		amount: "",
+		amount: ""
 	});
+	*/
 
 	const handleAddFormData = (e) => {
 		e.preventDefault();
