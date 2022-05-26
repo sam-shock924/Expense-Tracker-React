@@ -1,13 +1,17 @@
 import Table from "react-bootstrap/Table";
+import { Button } from "react-bootstrap";
 
 const ExpenseTable = ({ expenseData, setExpenseData }) => {
 	const expenseDataRow = expenseData.map((expense) => (
-		<tr>
+		<tr key={expense.id}>
 			<td>{expense.date}</td>
 			<td>{expense.location}</td>
 			<td>{expense.description}</td>
 			<td>{expense.type}</td>
 			<td>${expense.amount}</td>
+			<td>
+				<Button variant="outline-danger">Delete</Button>
+			</td>
 		</tr>
 	));
 
@@ -21,6 +25,7 @@ const ExpenseTable = ({ expenseData, setExpenseData }) => {
 						<th>Description</th>
 						<th>Payment Type</th>
 						<th>Amount</th>
+						<th>...</th>
 					</tr>
 				</thead>
 				<tbody className="expense-table-body">{expenseDataRow}</tbody>
