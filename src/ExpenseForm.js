@@ -1,24 +1,29 @@
 import { Modal, Button } from "react-bootstrap";
 import { useState } from "react";
 
-export default function ExpenseForm({ closeModal, updateTable }) {
-	/* PUSH TO APP.JS
-	const [userFormData, setUserFormData] = useState({
-		date: "",
-		description: "",
-		type: "",
-		amount: ""
-	});
-	*/
+export default function ExpenseForm({
+	closeModal,
+	expenseData,
+	setExpenseData,
+}) {
+	const [date, setDate] = useState("");
+	const [location, setLocation] = useState("");
+	const [description, setDescription] = useState("");
+	const [type, setType] = useState("");
+	const [amount, setAmount] = useState("");
 
 	const handleAddFormData = (e) => {
 		e.preventDefault();
-		const formDataName = e.target.getAttribute("name");
-		const formDataValue = e.target.value;
-		const newFormData = { ...userFormData };
-		newFormData[formDataName] = formDataValue;
-		setUserFormData(newFormData);
-		console.log(newFormData);
+		const expense = {
+			id: Date.now(),
+			date,
+			location,
+			description,
+			type,
+			amount,
+		};
+		setExpenseData([...expenseData, expense]);
+		console.log("expenseDate: ", expenseData);
 	};
 
 	return (
@@ -36,10 +41,27 @@ export default function ExpenseForm({ closeModal, updateTable }) {
 							<input
 								type="date"
 								name="date"
+								value={date}
 								className="col-sm-9"
 								id="item-date"
-								onChange={handleAddFormData}
+								onChange={(e) => setDate(e.target.value)}
 								htmlFor="date"
+								required
+							/>
+							<label
+								htmlFor="item-location"
+								className="col-sm-3 col-form-label"
+							>
+								Location:
+							</label>
+							<input
+								type="text"
+								name="location"
+								value={location}
+								className="col-sm-9"
+								id="item-location"
+								onChange={(e) => setLocation(e.target.value)}
+								htmlFor="location"
 								required
 							/>
 							<br />
@@ -52,10 +74,11 @@ export default function ExpenseForm({ closeModal, updateTable }) {
 							<input
 								type="text"
 								name="description"
+								value={description}
 								className="col-sm-9"
 								id="item-description"
 								placeholder="Enter description"
-								onChange={handleAddFormData}
+								onChange={(e) => setDescription(e.target.value)}
 								htmlFor="description"
 								required
 							/>
@@ -69,8 +92,9 @@ export default function ExpenseForm({ closeModal, updateTable }) {
 							<select
 								className="col-sm-9"
 								name="type"
+								value={type}
 								id="item-purchase-type"
-								onChange={handleAddFormData}
+								onChange={(e) => setType(e.target.value)}
 								htmlFor="payment type"
 								required
 							>
@@ -87,10 +111,11 @@ export default function ExpenseForm({ closeModal, updateTable }) {
 							<input
 								type="number"
 								name="amount"
+								value={amount}
 								className="col-sm-9"
 								id="item-amount"
 								placeholder="Enter amount"
-								onChange={handleAddFormData}
+								onChange={(e) => setAmount(e.target.value)}
 								htmlFor="amount"
 								required
 							/>

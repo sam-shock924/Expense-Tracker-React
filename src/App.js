@@ -5,12 +5,7 @@ import { useState } from "react";
 function App() {
 	const title = "Expense Tracker";
 	const [modalState, setModalState] = useState(false);
-	const [userFormData, setUserFormData] = useState({
-		date: "",
-		description: "",
-		type: "",
-		amount: "",
-	});
+	const [expenseData, setExpenseData] = useState([]);
 
 	return (
 		<div className="App">
@@ -25,8 +20,14 @@ function App() {
 					Create New Expense
 				</button>
 			</div>
-			{modalState && <ExpenseForm closeModal={setModalState} />}
-			<ExpenseTable updateTable={setUserFormData} />
+			{modalState && (
+				<ExpenseForm
+					closeModal={setModalState}
+					expenseData={expenseData}
+					setExpenseData={setExpenseData}
+				/>
+			)}
+			<ExpenseTable expenseData={expenseData} setExpenseData={setExpenseData} />
 		</div>
 	);
 }
