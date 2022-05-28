@@ -99,10 +99,10 @@ export default function ExpenseForm({
 								required
 							>
 								<option>Please Select a Payment Option</option>
-								<option value="credit">Credit</option>
-								<option value="debit">Debit</option>
-								<option value="cash">Cash</option>
-								<option value="cryptocurrency">Cryptocurrency</option>
+								<option value="Credit">Credit</option>
+								<option value="Debit">Debit</option>
+								<option value="Cash">Cash</option>
+								<option value="Cryptocurrency">Cryptocurrency</option>
 							</select>
 							<br />
 							<label htmlFor="item-amount" className="col-sm-3 col-form-label">
