@@ -20,6 +20,7 @@ const ExpenseTable = ({ expenseData, setExpenseData }) => {
 			<td>${expense.amount}</td>
 			<td>
 				<Button
+					className="delete-button"
 					variant="outline-danger"
 					onClick={() => handleDelete(expense.id)}
 				>

@@ -1,4 +1,4 @@
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, CloseButton } from "react-bootstrap";
 import { useState } from "react";
 
 export default function ExpenseForm({
@@ -28,10 +28,11 @@ export default function ExpenseForm({
 
 	return (
 		<div className="ExpenseForm">
-			<Modal.Dialog>
+			<Modal show={true}>
 				<form className="ExpenseFormArea" onSubmit={handleAddFormData}>
 					<Modal.Header>
 						<Modal.Title>New Expense</Modal.Title>
+						<CloseButton onClick={() => closeModal(false)} />
 					</Modal.Header>
 					<Modal.Body>
 						<div className="form-group">
@@ -122,11 +123,18 @@ export default function ExpenseForm({
 						</div>
 					</Modal.Body>
 					<Modal.Footer>
-						<Button onClick={() => closeModal(false)}>Cancel</Button>
-						<Button type="submit">Add new expense</Button>
+						<Button
+							className="btn btn-secondary"
+							onClick={() => closeModal(false)}
+						>
+							Cancel
+						</Button>
+						<Button variant="success" className="btn btn-primary" type="submit">
+							Add new expense
+						</Button>
 					</Modal.Footer>
 				</form>
-			</Modal.Dialog>
+			</Modal>
 		</div>
 	);
 }

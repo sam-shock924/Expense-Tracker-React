@@ -3,16 +3,15 @@ import ExpenseTable from "./ExpenseTable";
 import { useState } from "react";
 
 function App() {
-	const title = "Expense Tracker";
 	const [modalState, setModalState] = useState(false);
 	const [expenseData, setExpenseData] = useState([]);
 
 	return (
 		<div className="App">
 			<div className="app-title">
-				<h1>{title}</h1>
+				<h1>Expense Tracker</h1>
 			</div>
-			<div className="container">
+			<div className="container text-center">
 				<button
 					className="create-expense-button"
 					onClick={() => setModalState(!modalState)}
