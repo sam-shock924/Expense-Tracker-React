@@ -14,11 +14,11 @@ const ExpenseTable = ({ expenseData, setExpenseData }) => {
 
 	const expenseDataRow = expenseData.map((expense) => (
 		<tr key={expense.id}>
-			<td>{dayjs(expense.date).format("MM/DD/YYYY")}</td>
-			<td>{expense.location}</td>
-			<td>{expense.description}</td>
-			<td>{expense.type}</td>
-			<td>${expense.amount}</td>
+			<td id="table-row-data">{dayjs(expense.date).format("MM/DD/YYYY")}</td>
+			<td id="table-row-data">{expense.location}</td>
+			<td id="table-row-data">{expense.description}</td>
+			<td id="table-row-data">{expense.type}</td>
+			<td id="table-row-data">${expense.amount}</td>
 			<td>
 				<Button
 					className="delete-button"
@@ -35,7 +35,7 @@ const ExpenseTable = ({ expenseData, setExpenseData }) => {
 		<div className="expense-table">
 			<Table striped bordered hover>
 				<thead className="thead-dark">
-					<tr>
+					<tr className="table-header">
 						<th>Date</th>
 						<th>Location</th>
 						<th>Description</th>

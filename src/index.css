@@ -18,26 +18,37 @@ h1 {
   text-align: center;
   padding: 20px;
   text-transform: uppercase;
-  text-shadow: 3px 3px 3px rgb(0, 64, 5);
+  text-shadow: 1px 1px 1px rgb(0, 64, 5);
+}
+
+.table-header,
+#table-row-data {
+  pointer-events: none;
 }
 
 .create-expense-button {
   margin: 13px;
   padding: 5px;
-  border-radius: 5px;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 15px;
+  border-radius: 10px;
+  border-color: green;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  /* hover animation next*/
+  box-shadow: 0 0 .25em green;
+  transition: background-color 100ms ease-in;
+}
+
+.create-expense-button:hover, 
+.create-expense-button:focus {
+  background: green;
+  color: white;
+  box-shadow: 0 0 .5em green;
 }
 
 .expense-table {
   margin: 20px;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 50px;
   font-size: 15px;
   text-align: center;
-
 }
