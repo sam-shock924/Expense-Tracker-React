@@ -38,8 +38,7 @@ h1 {
   transition: background-color 100ms ease-in;
 }
 
-.create-expense-button:hover, 
-.create-expense-button:focus {
+.create-expense-button:hover{
   background: green;
   color: white;
   box-shadow: 0 0 .5em green;
