@@ -23,7 +23,7 @@ export default function ExpenseForm({
 			amount,
 		};
 		setExpenseData([...expenseData, expense]);
-		console.log("expenseDate: ", expenseData);
+		closeModal(false);
 	};
 
 	return (

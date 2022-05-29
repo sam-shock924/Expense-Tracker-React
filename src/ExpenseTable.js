@@ -1,5 +1,6 @@
 import Table from "react-bootstrap/Table";
 import { Button } from "react-bootstrap";
+import dayjs from "dayjs";
 
 const ExpenseTable = ({ expenseData, setExpenseData }) => {
 	const handleDelete = (id) => {
@@ -13,7 +14,7 @@ const ExpenseTable = ({ expenseData, setExpenseData }) => {
 
 	const expenseDataRow = expenseData.map((expense) => (
 		<tr key={expense.id}>
-			<td>{expense.date}</td>
+			<td>{dayjs(expense.date).format("MM/DD/YYYY")}</td>
 			<td>{expense.location}</td>
 			<td>{expense.description}</td>
 			<td>{expense.type}</td>

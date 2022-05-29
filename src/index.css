@@ -15,20 +15,22 @@ code {
 }
 
 h1 {
-  font-size: 3em;
   text-align: center;
   padding: 20px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 3px rgb(0, 64, 5);
 }
 
 .create-expense-button {
-  margin: 15px;
+  margin: 13px;
   padding: 5px;
   border-radius: 5px;
   background-color: #4CAF50;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   cursor: pointer;
+  /* hover animation next*/
 }
 
 .expense-table {
@@ -37,8 +39,5 @@ h1 {
   border-radius: 5px;
   font-size: 15px;
   text-align: center;
-}
 
-.delete-button {
-  font-size: 10px;
 }
